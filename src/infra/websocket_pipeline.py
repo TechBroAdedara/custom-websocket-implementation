@@ -7,7 +7,7 @@ from ..exceptions import (
 )
 from ..infra.token import AccessToken
 from ..schema.user_schema import UserOutModel
-from ..tools import logger
+from ..tools.logger import logger
 
 async def authorize_websocket(websocket: WebSocket) -> WebSocket | None:
     token_header = websocket.headers.get("Authorization")
@@ -36,8 +36,9 @@ class WebsocketMessagePipeline:
     and can optionally handle managers with listenable capabilities.
     """
 
+    @classmethod
     async def persist_websocket_connection(
-            self,
+            cls,
             websocket: WebSocket,
             websocket_manager: BaseWebsocketManager
     ) -> None:

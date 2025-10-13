@@ -8,7 +8,7 @@ from sqlalchemy import Delete, delete, exists
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from ..exceptions import InvalidTokenError
-from ..models import Token
+from ..models.refresh_tokens import Token
 from ..schema.user_schema import UserOutModel
 from ..settings import settings
 

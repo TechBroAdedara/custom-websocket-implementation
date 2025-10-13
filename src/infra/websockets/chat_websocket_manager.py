@@ -4,12 +4,12 @@ from fastapi.params import Depends
 from starlette import status
 from starlette.websockets import WebSocketDisconnect, WebSocket
 
-from src.exceptions import NonExistentWebsocketRecipient, InvalidWebsocketMessage
-from src.infra.websockets.base_websocket_manager import BaseWebsocketManager, WebsocketType
-from src.schema.user_schema import UserOutModel
-from src.schema.websocket_schema import WebsocketChatRequest, WebsocketChatResponse
-from ..services.chat_service import ChatService
-from src.tools.logger import logger
+from ...exceptions import NonExistentWebsocketRecipient, InvalidWebsocketMessage
+from ...infra.websockets.base_websocket_manager import BaseWebsocketManager, WebsocketType
+from ...schema.user_schema import UserOutModel
+from ...schema.websocket_schema import WebsocketChatRequest, WebsocketChatResponse
+from ...services.chat_service import ChatService
+from ...tools.logger import logger
 
 class ChatWebsocketManager(BaseWebsocketManager):
     websocket_type: WebsocketType = WebsocketType.CHAT

@@ -5,7 +5,7 @@ from zoneinfo import ZoneInfo
 
 from pydantic import BaseModel
 
-from src.models import ChatMessage
+from ..models.chat import ChatMessage
 from .user_schema import UserOutModel
 
 class ChatRoomMessageResponse(BaseModel):

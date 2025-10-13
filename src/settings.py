@@ -1,4 +1,3 @@
-from fastapi_mail import ConnectionConfig
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
