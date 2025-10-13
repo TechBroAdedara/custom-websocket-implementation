@@ -137,7 +137,3 @@ class BaseWebsocketManager(ABC):
             raise InvalidWebsocketMessage("Websocket is malformed or corrupted")
 
         return message
-
-@runtime_checkable
-class CanListen(Protocol):
-    async def listen(self, websocket: WebSocket) -> None: ...
