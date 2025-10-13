@@ -1,5 +1,5 @@
 # Custom-WebSocket-Implementation
-Custom WebSocket implementation I designed myself on a whim, in 2 days.
+Custom WebSocket implementation I designed on a whim, in 2 days.
 
 ## Inspiration
 The initial idea to use a global WebSocket manager was inspired by Starlette's own docs about WebSockets. 
